@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 import sys
-
-with open('q', 'r') as file:
-    text = file.read()
-sys.stderr.write(text)
+sys.stderr.write("and that piece of art is useful - Dora Korpar, 2015-10-19\n")
 sys.exit(1)

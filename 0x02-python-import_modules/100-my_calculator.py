@@ -10,16 +10,12 @@ if __name__ == "__main__":
     operator = argv[2]
     if operator == '+':
         print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-        exit(0)
     elif operator == '-':
         print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-        exit(0)
     elif operator == '*':
         print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
-        exit(0)
     elif operator == '/':
         print("{:d} / {:d} = {:d".format(a, b, div(a, b)))
-        exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)

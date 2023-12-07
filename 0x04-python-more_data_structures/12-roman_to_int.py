@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_value(prmcharacter):
-    rom_list = [('I', 1), ('V', 5), ('X', 10),
-                  ('L', 50), ('C', 100), ('D', 500), ('M', 1000)]
+    rom_list = [('I', 1), ('V', 5), ('X', 10), ('L', 50),
+                ('C', 100), ('D', 500), ('M', 1000)]
     for item in rom_list:
         character, value = item
         if (prmcharacter is character):

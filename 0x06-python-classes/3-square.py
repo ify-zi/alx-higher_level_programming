@@ -8,7 +8,6 @@ class Square:
         __size (int): a private class attr
     """
 
-    __size = 0
     def __init__(self, size=0):
         """initialise the class
         Args:

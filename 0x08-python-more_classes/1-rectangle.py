@@ -13,8 +13,8 @@ class Rectangle:
         """
             param constructor
         """
-        self.width = width
         self.height = height
+        self.width  = width
 
     @property
     def width(self):
@@ -23,24 +23,22 @@ class Rectangle:
         """
         return self.__width
 
+    @width.setter
+    def width(self, value):
+        """attr setter for width"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
+
     @property
     def height(self):
         """
             property getter
         """
         return self.__height
-
-    @width.setter
-    def width(self, value):
-        """
-            Atttr (width) setter
-        """
-        if type(value) is not int:
-            raise TypeError("width must be an interger")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
 
     @height.setter
     def height(self, value):

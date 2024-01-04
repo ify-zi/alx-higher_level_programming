@@ -60,15 +60,13 @@ class Rectangle:
         """s
             object compare func
         """
-        if not isinstance(rect_1, Rectangle):
+        if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an integer")
-        elif not isinstance(rect_2, Rectangle):
+        if type(rect_2) is not Rectangle:
             raise TypeError("rect_2 must be an integer")
-        else:
-            if rect_2.area() > rect_1.area():
-                return rect_2
-            else:
-                return rect_1
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
 
     def area(self):
         """

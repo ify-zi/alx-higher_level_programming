@@ -14,7 +14,7 @@ class Rectangle:
             param constructor
         """
         self.height = height
-        self.width  = width
+        self.width = width
 
     @property
     def width(self):

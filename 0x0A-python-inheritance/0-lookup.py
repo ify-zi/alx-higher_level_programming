@@ -5,5 +5,7 @@
 
 
 def lookup(obj):
-    """ return method and attr"""
+    """ 
+        return method and attr
+    """
     return dir(obj)

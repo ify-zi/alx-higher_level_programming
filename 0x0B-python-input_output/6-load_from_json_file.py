@@ -7,7 +7,7 @@
 import json
 
 
-def load_from_json(filename):
+def load_from_json_file(filename):
     """
         load from json file
     """

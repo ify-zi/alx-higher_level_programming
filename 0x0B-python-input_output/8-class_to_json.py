@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" 
+"""
     Module that returns the dictionary description
 """
 
 
 def class_to_json(obj):
     """
-      returns the dictionary description of an obj 
+        returns the dictionary description of an obj 
     """
 
     my_dict = {}

@@ -35,9 +35,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes a JSON string to a json file"""
-        
+
         filename = cls.__name__ + ".json"
-        with open(filename, 'w', encoding = "utf-8") as f:
+        with open(filename, 'w', encoding="utf-8") as f:
             if list_objs is None:
                 f.write("[]")
             else:
@@ -85,7 +85,7 @@ class Base:
             writes a CSV  string to a CSV file
         """
         filename = cls.__name__ + ".csv"
-        with open(filename, "w", newline= "") as csvfile:
+        with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
                 csvfile.write("[]")
             else:
@@ -93,7 +93,7 @@ class Base:
                     field_names = ["id", "width", "height", "x", "y"]
                 else:
                     field_names = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csvfile, fieldnames = field_names)
+                writer = csv.DictWriter(csvfile, fieldnames=field_names)
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
@@ -111,7 +111,7 @@ class Base:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
-                            for d in list_dicts]
+                              for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []

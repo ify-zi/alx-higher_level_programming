@@ -7,7 +7,6 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
     """
         Object Rectangle inherits Base class att
@@ -96,8 +95,9 @@ class Rectangle(Base):
     def __str__(self):
         """return a string format of a instance data"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
-            self.__x, self.__y, self.__width, self.__height)
-    
+                                                self.__x, self.__y,
+                                                self.__width, self.__height)
+
     def update(self, *args, **kwargs):
         """
             update params of object
@@ -106,7 +106,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
             return
-            
+
         try:
             self.id = args[0]
             self.width = args[1]
@@ -119,7 +119,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ covert attributes to Dictionary """
         attr_dict = {}
-        attr_dict = {"x" : getattr(self, "x"), "y" : getattr(self, "y"), 
-                "id" : getattr(self, "id"), "height" : getattr(self, "height"),
-                "width" : getattr(self, "width")}
+        attr_dict = {
+                    "x": getattr(self, "x"), "y": getattr(self, "y"),
+                    "id": getattr(self, "id"),
+                    "height": getattr(self, "height"),
+                    "width": getattr(self, "width")}
         return attr_dict

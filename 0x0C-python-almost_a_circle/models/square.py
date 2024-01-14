@@ -21,7 +21,8 @@ class Square(Rectangle):
     def __str__(self):
         """print out string format"""
 
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                  self.y, self.width))
 
     @property
     def size(self):
@@ -57,6 +58,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """return dictionary of attr"""
         attr_dict = {}
-        attr_dict = {"id" : getattr(self, "id"), "x" : getattr(self, "x"),
-                "size" : getattr(self, "size"), "y" : getattr(self, "y")}
+        attr_dict = {
+                    "id": getattr(self, "id"), "x": getattr(self, "x"),
+                    "size": getattr(self, "size"), "y": getattr(self, "y")}
         return attr_dict

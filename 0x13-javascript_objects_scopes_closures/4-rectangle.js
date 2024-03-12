@@ -11,11 +11,11 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (letter = 'X') {
     let shape = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        shape += 'X';
+        shape += letter;
       }
       console.log(shape);
       shape = '';

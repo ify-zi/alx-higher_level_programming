@@ -4,18 +4,25 @@
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
 
-db_conn = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                          passwd=sys.argv[2], db=sys.argv[3])
+if __name__ = '__main__':
+    """
+       Create connection with database
+       query the database
+       print result
+    """
 
-cur = db_conn.cursor()
-cur.execute("SELECT * FROM states")
-query_row = cur.fetchall()
+    db_conn = MySQLdb.connect(host='localhost', user=sys.argv[1],
+                              passwd=sys.argv[2], db=sys.argv[3])
 
-for row in query_row:
-    print(row)
+    cur = db_conn.cursor()
+    cur.execute("SELECT * FROM states")
+    query_row = cur.fetchall()
 
-cur.close()
-db_conn.close()
+    for row in query_row:
+        print(row)
+
+    cur.close()
+    db_conn.close()

@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     db_session = Session()
 
-    query_rows = db_session.query(State).filter(State.name==argv[4])\
+    query_rows = db_session.query(State).filter(State.name == argv[4])\
         .order_by(State.id).first()
     if query_rows is None:
         print("Not found")

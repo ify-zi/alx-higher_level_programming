@@ -24,5 +24,5 @@ if __name__ == '__main__':
 
     query_rows = db_session.query(State).first()
     if query_rows is None:
-        print()
+        print("Nothing")
     print("{}: {}".format(query_rows.id, query_rows.name))

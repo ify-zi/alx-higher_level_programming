@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     db_session = Session()
 
-    query_rows = db_session.query(State).filter(State.name.like('%a%'))
-    .order_by(State.id)
+    query_rows = db_session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id)
     for row in query_rows:
         print("{}: {}".format(row.id, row.name))

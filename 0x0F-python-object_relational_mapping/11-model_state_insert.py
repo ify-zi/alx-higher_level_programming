@@ -22,6 +22,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     db_session = Session()
 
-    db_insert = State(id=6, name="Louisiana")
+    db_insert = State(name="Louisiana")
     db_session.add(db_insert)
     db_session.commit()
+    print("{0}".format(db_insert.id))
+    db_session.close()

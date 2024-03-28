@@ -14,5 +14,4 @@ if __name__ == '__main__':
     param = urllib.parse.urlencode(param)
     param = param.encode('utf-8')
     with urllib.request.urlopen(link, param) as resp:
-        msg = resp.read()
-        print(msg)
+        print(resp.read().decode('utf-8'))

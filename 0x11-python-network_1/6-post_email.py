@@ -10,5 +10,5 @@ if __name__ == '__main__':
 
     link = argv[1]
     info = {'email': argv[2]}
-    resp = requests.post(link, param=info)
+    resp = requests.post(link, data=info)
     print(resp.text)

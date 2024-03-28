@@ -5,8 +5,9 @@
 """
 
 
-import sys
-import urllib.request
+if __name__ == '__main__':
+    import sys
+    import urllib.request
 
-with urllib.request.urlopen(sys.argv[1]) as resp:
-    print(resp.headers.get('X-request-id'))
+    with urllib.request.urlopen(sys.argv[1]) as resp:
+        print(resp.headers.get('X-request-id'))

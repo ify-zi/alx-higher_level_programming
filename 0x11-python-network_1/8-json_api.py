@@ -9,12 +9,13 @@ if __name__ == '___main__':
     import requests
     from sys import argv
 
-    q = argv[2]
-    resp = requests.post(argv[1], data=q)
+    t_url = "http://0.0.0.0:5000/search_user"
+    dat = {'q': argv[1][0] if len(argv) > 1}
+    resp = requests.post(t_url, data=dat)
     f_resp = resp.json()
-    if f_resp is None:
+    if not f_resp:
         print("No result")
-    if f_resp == isinstance(json()):
-        print("[{}]: {}".format(f_resp['id'], f_resp['name']))
     else:
+        print("[{}]: {}".format(f_resp.get('id'), f_resp.get('name')))
+    except ValueError:
         print("Not a valid JSON")

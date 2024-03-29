@@ -9,7 +9,8 @@ if __name__ == "__main__":
 
     repo = argv[1]
     owner = argv[2]
-    resp = requests.get("https://api.github.com/repos/{}/{}/commits".format(owner, repo))
+    resp = requests.get("https://api.github.com/repos/{}/{}/commits"
+                        .format(owner, repo))
     committers = resp.json()
     for committer in committers[:10]:
         print(committer.get("sha"), end=": ")

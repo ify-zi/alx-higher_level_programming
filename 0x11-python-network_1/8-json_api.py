@@ -10,8 +10,8 @@ if __name__ == '__main__':
     from sys import argv
 
     t_url = "http://0.0.0.0:5000/search_user"
-    dat = {"q": argv[1][0] if len(argv) > 1 else ""}
-    resp= requests.post(t_url, data=dat)
+    q = argv[1] if len(argv) > 1 else ""
+    resp= requests.post(t_url, data=q)
     try:
         f_resp = resp.json()
         if not f_resp:

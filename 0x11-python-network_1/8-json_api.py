@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     t_url = "http://0.0.0.0:5000/search_user"
     q = argv[1] if len(argv) > 1 else ""
-    resp= requests.post(t_url, data=q)
+    resp = requests.post(t_url, data=q)
     try:
         f_resp = resp.json()
         if not f_resp:

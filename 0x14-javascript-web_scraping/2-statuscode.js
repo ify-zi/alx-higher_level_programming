@@ -5,5 +5,5 @@ const process = require('process');
 const url = process.argv[2];
 
 request(url, function (response) {
-  console.log('code:', response.statusCode);
+  console.log('code: ', response.statusCode.toString());
 });
